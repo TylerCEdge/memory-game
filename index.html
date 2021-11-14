@@ -1,102 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="trash.png" type="image/png" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Nerko+One&display=swap"
-      rel="stylesheet"
-    />
-    <script
-      src="https://kit.fontawesome.com/92e3232c95.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="style.css" />
-    <title>Edges Memory Game</title>
-  </head>
-  <body>
-    <!-- think it might be cool to do a parallax animated background instead -->
-    <div class="modal hidden">
-      <div id="stars"></div>
-      <div id="stars2"></div>
-      <div id="stars3"></div>
-      <div class="modal__contents-zindex">
-        <div class="modal__contents-wrapper">
-          <div class="modal__contents">
-            <div class="modal__text">game over!</div>
-            <div class="modal__condition">You Win!</div>
-            <div class="modal__nav">
-              <div class="modal__nav-text">Try Again?</div>
-              <div class="modal__btn">
-                <a href="/" class="btn btn__yes">yes</a>
-              </div>
-              <div class="modal__btn">
-                <a href="/" class="btn btn__no">no</a>
-              </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="trash.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Nerko+One&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/92e3232c95.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css" />
+  <title>Edges Memory Game</title>
+</head>
+
+<body>
+  <!-- think it might be cool to do a parallax animated background instead -->
+  <div class="modal hidden">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+    <div class="modal__contents-zindex">
+      <div class="modal__contents-wrapper">
+        <div class="modal__contents">
+          <div class="modal__text">game over!</div>
+          <div class="modal__condition">You Win!</div>
+          <div class="modal__nav">
+            <div class="modal__nav-text">Try Again?</div>
+            <div class="modal__btn">
+              <a href="/" class="btn btn__yes">yes</a>
+            </div>
+            <div class="modal__btn">
+              <a href="/" class="btn btn__no">no</a>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="container">
-      <div class="game">
-        <div class="hero">
-          <h1 class="hero__text">memory game</h1>
-          <h6 class="hero__score">
-            score: <span class="hero__score-number">0</span>
-          </h6>
-          <div class="hero__nav">
-            <div class="hero__btn">
-              <a href="/" class="btn btn__new">Reset</a>
-            </div>
+  </div>
+  <div class="container">
+    <div class="game">
+      <div class="hero">
+        <h1 class="hero__text">memory game</h1>
+        <h6 class="hero__score">
+          score: <span class="hero__score-number">0</span>
+        </h6>
+        <div class="hero__nav">
+          <div class="hero__btn">
+            <a href="/" class="btn btn__new">Reset</a>
           </div>
         </div>
-        <!-- may try to make the svgs rotate on hover -->
-        <div class="piece" id="1">
-          <div class="image"><i class="fas fa-bacon"></i></div>
-          <p class="piece__text">bacon</p>
-        </div>
-        <div class="piece" id="2">
-          <div class="image"><i class="fas fa-cheese"></i></div>
-          <p class="piece__text">cheese</p>
-        </div>
-        <div class="piece" id="3">
-          <div class="image"><i class="fas fa-bread-slice"></i></div>
-          <p class="piece__text">bread</p>
-        </div>
-        <div class="piece" id="4">
-          <div class="image"><i class="fas fa-campground"></i></div>
-          <p class="piece__text">camp</p>
-        </div>
-        <div class="piece" id="5">
-          <div class="image"><i class="fas fa-football-ball"></i></div>
-          <p class="piece__text">football</p>
-        </div>
-        <div class="piece" id="6">
-          <div class="image"><i class="fas fa-tree"></i></div>
-          <p class="piece__text">tree</p>
-        </div>
-        <div class="piece" id="7">
-          <div class="image"><i class="fas fa-burn"></i></div>
-          <p class="piece__text">fire</p>
-        </div>
-        <div class="piece" id="8">
-          <div class="image"><i class="fas fa-cannabis"></i></div>
-          <p class="piece__text piece__text--caps">cbd</p>
-        </div>
-        <div class="piece" id="9">
-          <div class="image"><i class="fas fa-dna"></i></div>
-          <p class="piece__text piece__text--caps">dna</p>
-        </div>
+      </div>
+      <!-- may try to make the svgs rotate on hover -->
+      <div class="piece" id="1">
+        <div class="image"><i class="fas fa-bacon"></i></div>
+        <p class="piece__text">bacon</p>
+      </div>
+      <div class="piece" id="2">
+        <div class="image"><i class="fas fa-cheese"></i></div>
+        <p class="piece__text">cheese</p>
+      </div>
+      <div class="piece" id="3">
+        <div class="image"><i class="fas fa-bread-slice"></i></div>
+        <p class="piece__text">bread</p>
+      </div>
+      <div class="piece" id="4">
+        <div class="image"><i class="fas fa-campground"></i></div>
+        <p class="piece__text">camp</p>
+      </div>
+      <div class="piece" id="5">
+        <div class="image"><i class="fas fa-football-ball"></i></div>
+        <p class="piece__text">football</p>
+      </div>
+      <div class="piece" id="6">
+        <div class="image"><i class="fas fa-tree"></i></div>
+        <p class="piece__text">tree</p>
+      </div>
+      <div class="piece" id="7">
+        <div class="image"><i class="fas fa-burn"></i></div>
+        <p class="piece__text">fire</p>
+      </div>
+      <div class="piece" id="8">
+        <div class="image"><i class="fas fa-cannabis"></i></div>
+        <p class="piece__text piece__text--caps">cbd</p>
+      </div>
+      <div class="piece" id="9">
+        <div class="image"><i class="fas fa-dna"></i></div>
+        <p class="piece__text piece__text--caps">dna</p>
       </div>
     </div>
-  </body>
-  <script
-    src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
-    crossorigin="anonymous"
-  ></script>
-  <script src="index.js"></script>
+  </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+<script src="index.js"></script>
+
 </html>

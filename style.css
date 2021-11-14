@@ -47,7 +47,7 @@ body {
 }
 
 .modal__contents-zindex {
-  display block
+  display: block;
   display: block;
   width: 100%;
   min-height: 100vh;
